@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>JDV</title>
+</head>
+<body>
+
+    <div class="movi"></div>
+
+    <h1>Jogo da Velha</h1>
+
+    <!-- * Onde ficarão os quadrados => stage -->
+    <div class="stage">
+        <!-- * cada uma dessas div's representa uma linha e dentro tem os 3 quadrados -->
+        <div>
+            <!-- * Criando os symbols para dizer de quem é a vez -->
+            <div id="0" class="square zero">
+            </div>
+            <div id="1" class="square">
+            </div>
+            <div id="2" class="square dois"></div>
+        </div>
+        <div>
+            <div id="3" class="square"></div>
+            <div id="4" class="square"></div>
+            <div id="5" class="square"></div></div>
+        <div>
+            <div id="6" class="square seis"></div>
+            <div id="7" class="square"></div>
+            <div id="8" class="square oito"></div></div>
+        </div>
+
+        
+        <button onclick="reset()">
+        <ion-icon name="refresh-circle-outline"></ion-icon>
+    </button>
+
+<script src="./scripts/game.js"></script>
+<script src="./scripts/interface.js"></script>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+</body>
+</html>
+
+
+<!-- todos //=>  Input que receba o nome dos players -->
+<!-- todos //=>  Readme organizado -->
+<!-- todos //=>  fav icon -->
+<!-- todos //=>  alterar os icons -->
