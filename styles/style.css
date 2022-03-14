@@ -142,7 +142,7 @@ button:active{
     content: "\2694";
     font-size: 80px;
     line-height: 8.5rem;
-
+    
     top: 0;
     bottom: 0;
     left: 0;
@@ -164,3 +164,25 @@ button:active{
 .oito{
     border-radius:  0 0 1rem 0;
 }
+
+@media screen and (max-width: 500px) {
+    .square{
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .x:after{
+        font-size: 4rem;
+        line-height: 4.5rem;
+    }
+    
+    .o:after{
+        font-size: 4rem;
+        line-height: 4.5rem;
+    }
+}
+
+/* todo --> Responsividade */
+/* todo --> Melhorar design */
+/* todo --> Adc animações */
+/* todo --> Melhorar os icons */

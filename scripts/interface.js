@@ -46,3 +46,6 @@ function updateSquare(position){
 function reset(){
     window.location.reload();
 }
+
+// todo ==> Write the winner on the screen
+// todo ==> Receive players name
