@@ -49,3 +49,4 @@ function reset(){
 
 // todo ==> Write the winner on the screen
 // todo ==> Receive players name
+// todo ==> Change alert
