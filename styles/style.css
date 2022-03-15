@@ -11,12 +11,13 @@
 
 
 :root{
-    --color-main: #70ff2ec7;
-    --color-active: #70ff2e;
+    --hue-color: 240;
 
-    --border-clr: #319b00c7;
-    --border-active: #319b00;
-    --shadow-: 5px 5px 15px #242424;
+    --color-main: hsla(101, 100%, 59%, 0.78);
+    --color-active: hsl(101, 100%, 59%);
+
+    --border-clr: hsla(101, 100%, 30%, 0.78);
+    --border-active: hsl(101, 100%, 30%);
 }
 
 body{
@@ -83,25 +84,38 @@ button{
     background-color: var(--color-main);
     opacity: .9;
     margin: .3rem;
-    box-shadow: 5px 5px 15px #242424;    
+
+    /* * Efeito meio cartoon */
+    box-shadow: 3px 3px var(--border-clr), 5px 5px 15px #000000;
+    border: 2px solid var(--border-clr);
+
     transition: all ease-in-out .2s;
     cursor: pointer;
     border-radius: .5rem;
-    border-right: 6px solid var(--border-clr);
-    border-bottom: 6px solid var(--border-clr);
-    border-top: 3px solid var(--border-clr);
-    border-left: 3px solid var(--border-clr);
 }
 
 .square:active{
     box-shadow: 0px 0px 15px var(--color-active);    
     background-color: var(--color-active);
-    border-right: 4px solid var(--border-active);
-    border-bottom: 4px solid var(--border-active);
-    border-top: 1px solid var(--border-active);
-    border-left: 1px solid var(--border-active);
+
+    box-shadow: 1px 1px var(--border-active), 0px 0px 10px var(--color-main);
+    border: 1px solid var(--border-active);
+
     transition: all ease-in-out .2s;
     transition-delay: .5;
+}
+
+@keyframes surgir {
+    0%{
+        font-size: 0px;
+        line-height: 9rem;
+        opacity: 0.5;
+    }
+    100%{
+        font-size: 80px;
+        line-height: 9rem;
+        opacity: 1;
+    }
 }
 
 .o{
@@ -110,13 +124,12 @@ button{
 
 .o:after{
     position: absolute;
-    content: "\1F6E1";
-    font-size: 80px;
-    line-height: 8.5rem;
+    content: "🛡️";
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    animation: surgir .3s ease-in-out both;
 }
 
 .x{
@@ -126,14 +139,12 @@ button{
 .x:after{
 
     position: absolute;
-    content: "\2694";
-    font-size: 80px;
-    line-height: 8.5rem;
-    
+    content: "⚔️";
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    animation: surgir .3s ease-in-out both;
 }
 
 .zero{
@@ -179,23 +190,34 @@ button{
     .square{
         width: 15vw;
         height: 15vw;
-/* 
-        width: 5rem;
-        height: 5rem; */
+
+        box-shadow: 5px 5px 15px #000000;
+        border-top: 3px solid var(--border-clr);
+        border-bottom: 6px solid var(--border-clr);
+        border-left: 3px solid var(--border-clr);
+        border-right: 6px solid var(--border-clr);
     }
 
-    .x:after{
-        font-size: 3rem;
-        line-height: 4rem;
+    .square:active{
+        box-shadow: 5px 5px 15px var(--color-main);
+        border-top: 1px solid var(--border-active);
+        border-bottom: 3px solid var(--border-active);
+        border-left: 1px solid var(--border-active);
+        border-right: 3px solid var(--border-active);
     }
     
-    .o:after{
-        font-size: 3rem;
-        line-height: 4rem;
+    @keyframes surgir {
+        0%{
+            font-size: 0px;
+            line-height: 5rem;
+            opacity: 0.5;
+        }
+        100%{
+            font-size: 3rem;
+            line-height: 5rem;
+            opacity: 1;
+        }
     }
-    /* .stage{
-        width: 60vw;
-    } */
 }
 
 /* todo --> Responsividade */

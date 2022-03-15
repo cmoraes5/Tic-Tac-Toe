@@ -2,6 +2,7 @@
 // * o HTML e a parte lógica do jogo
 
 // todo => Criar evento nos quadrados, se algm clicar em um qdrdo, quero saber qual foi
+// todo => Mostrar de quem é a vez
 
 // ! <><><><><><> TESTE <><><><><><><><>
 
@@ -9,14 +10,14 @@
     const winningMessageElement = document.querySelector('#winningMessage');
     const winningMessageText = document.querySelector('[data-winning-message]');
     
-    const playerDisplay = document.querySelector('.display-player');
+    const playerDisplay = document.querySelector('[data-player-time]');
+
+
     function reset(){
         window.location.reload();
     }
 
 // ! <><><><><><> TESTE <><><><><><><><>
-
-//check if there's a Draw or a Winner in the game
 
 document.addEventListener('DOMContentLoaded', ()=>{
 
@@ -58,6 +59,7 @@ function updateSquare(position){
     let square = document.getElementById(position.toString());
     let symbol = board[position];
     square.innerHTML = `<div class='${symbol}'></div>`
+    playerDisplay.innerHTML = `É a vez do jogador ${playerTime}`
 }
 
 
