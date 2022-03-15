@@ -8,13 +8,14 @@
     <title>JDV</title>
 </head>
 <body>
-
-    <div class="movi"></div>
-
     <h1>Jogo da Velha</h1>
 
+    <section class="display">
+        Player <span class="display-player playerX">X</span>'s turn
+    </section>
+
     <!-- * Onde ficarão os quadrados => stage -->
-    <div class="stage">
+    <main class="stage">
         <!-- * cada uma dessas div's representa uma linha e dentro tem os 3 quadrados -->
         <div>
             <!-- * Criando os symbols para dizer de quem é a vez -->
@@ -32,12 +33,16 @@
             <div id="6" class="square seis"></div>
             <div id="7" class="square"></div>
             <div id="8" class="square oito"></div></div>
+        </main>
+
+        <div class="winning-message" id="winningMessage">
+            <div data-winning-message></div> 
+            <button onclick="reset()">
+            <ion-icon name="refresh-circle-outline"></ion-icon>
+        </button>
         </div>
 
         
-        <button onclick="reset()">
-        <ion-icon name="refresh-circle-outline"></ion-icon>
-    </button>
 
 <script src="./scripts/game.js"></script>
 <script src="./scripts/interface.js"></script>

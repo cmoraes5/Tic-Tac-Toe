@@ -3,6 +3,21 @@
 
 // todo => Criar evento nos quadrados, se algm clicar em um qdrdo, quero saber qual foi
 
+// ! <><><><><><> TESTE <><><><><><><><>
+
+
+    const winningMessageElement = document.querySelector('#winningMessage');
+    const winningMessageText = document.querySelector('[data-winning-message]');
+    
+    const playerDisplay = document.querySelector('.display-player');
+    function reset(){
+        window.location.reload();
+    }
+
+// ! <><><><><><> TESTE <><><><><><><><>
+
+//check if there's a Draw or a Winner in the game
+
 document.addEventListener('DOMContentLoaded', ()=>{
 
     let squares =  document.querySelectorAll(".square");
@@ -31,8 +46,10 @@ function handleClick(event){
         }
 
         setTimeout(() => {
-            alert("O Jogo acabou - O vencedor foi o player " + playerTime)
-        }, 11);
+            winningMessageText.innerText = `The player ${playerTime} is the Winner!`
+
+            winningMessageElement.classList.add('show')
+        }, 400);
     };
     updateSquare(position);
 }
@@ -43,9 +60,6 @@ function updateSquare(position){
     square.innerHTML = `<div class='${symbol}'></div>`
 }
 
-function reset(){
-    window.location.reload();
-}
 
 // todo ==> Write the winner on the screen
 // todo ==> Receive players name
