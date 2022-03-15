@@ -12,6 +12,9 @@
     
     const playerDisplay = document.querySelector('[data-player-time]');
 
+    // let inputN = document.querySelectorAll(".inputUser")
+    // var playerName = inputN.value;
+
 
     function reset(){
         window.location.reload();
@@ -39,11 +42,14 @@ function handleClick(event){
     let position = square.id;
 
     if(handleMove(position)){
+
         if(playerTime == 0){
             playerTime = 1;
+            // playerName = inputN[0].value;
         }
         else{
-            playerTime = 2;
+            playerTime = 0;
+            // playerName = inputN[1].value;
         }
 
         setTimeout(() => {
@@ -60,9 +66,9 @@ function updateSquare(position){
     let symbol = board[position];
     square.innerHTML = `<div class='${symbol}'></div>`
     playerDisplay.innerHTML = `É a vez do jogador ${playerTime}`
+    // playerDisplay.innerHTML = "É a vez do jogador " + inputN[0];
 }
 
 
 // todo ==> Write the winner on the screen
 // todo ==> Receive players name
-// todo ==> Change alert

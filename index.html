@@ -8,14 +8,49 @@
     <title>JDV</title>
 </head>
 <body>
-    <h1>Jogo da Velha</h1>
+    
+<!-- ! ----------------------------------------- Início ----------------------------------------- -->
+<!-- <div class="containerInicio">
+    <button id="comecar" onclick="comecarFunc()">
+        <h2>Jogar</h2>
+    </button>
+</div> -->
+<h1>Jogo da Velha</h1>
+    <!-- ! ----------------------------------------- Início ----------------------------------------- -->
 
+
+    <!-- ! ----------------------------------------- Players-Name ----------------------------------------- -->
+    <!-- <section class="nomePlayer-Section">
+
+        <div id="nome1">
+            ⚔️
+            <input class="inputUser" type="text" placeholder="Primeiro Player">
+        </div>
+
+        <div id="nome2">
+            🛡️
+            <input class="inputUser" type="text" placeholder="Segundo Player">
+        </div>
+
+        <section class="nomeAdd">
+            <button id="inicio" onclick="teste()">
+                <h3>Iniciar</h3>
+            </button>
+
+        </section>
+
+    </section> -->
+    <!-- ! ----------------------------------------- Players-Name ----------------------------------------- -->
+    
+    
+    <!-- ! ----------------------------------------- Display-Player/Begin ----------------------------------------- -->
     <section class="display">
         <span class="display-player" data-player-time>
             🛡️ começa
         </span>
     </section>
-
+    <!-- ! ----------------------------------------- Display-Player/Begin ----------------------------------------- -->
+    
     <!-- * Onde ficarão os quadrados => stage -->
     <main class="stage">
         <!-- * cada uma dessas div's representa uma linha e dentro tem os 3 quadrados -->
@@ -39,7 +74,7 @@
 
         <div class="winning-message" id="winningMessage">
             <div data-winning-message></div> 
-            <button onclick="reset()">
+            <button onclick="reset()" class="reset">
             <ion-icon name="refresh-circle-outline"></ion-icon>
         </button>
         </div>
@@ -54,7 +89,12 @@
 </html>
 
 
-<!-- todos //=>  Input que receba o nome dos players -->
 <!-- todos //=>  Readme organizado -->
 <!-- todos //=>  fav icon -->
-<!-- todos //=>  alterar os icons -->
+<!-- todos //=>  Adicionar btn reset -->
+<!-- todos //=>  Resolver bug do clique -->
+
+<!-- todos //=>  Adicionar placar -->
+<!-- todos //=>  Adicionar possibilidade de empate -->
+<!-- todos //=>  Resolver bug do nome -->
+

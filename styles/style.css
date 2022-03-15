@@ -42,7 +42,7 @@ h1{
     margin-bottom: 1rem;
 }
 
-button{
+.reset{
     position: relative;
     margin: 1.5rem auto;
     display: flex;
@@ -188,8 +188,8 @@ button{
 
 @media screen and (max-width: 580px) {
     .square{
-        width: 15vw;
-        height: 15vw;
+        width: 20vw;
+        height: 20vw;
 
         box-shadow: 5px 5px 15px #000000;
         border-top: 3px solid var(--border-clr);
@@ -213,8 +213,8 @@ button{
             opacity: 0.5;
         }
         100%{
-            font-size: 3rem;
-            line-height: 5rem;
+            font-size: 10vw;
+            line-height: 20vw;
             opacity: 1;
         }
     }
