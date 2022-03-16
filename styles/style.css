@@ -26,12 +26,112 @@ body{
 }
 
 h1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     font-family: Arial, Helvetica, sans-serif;
     color: #fff;
     text-align: center;
-    font-size: 50px;
+    font-size: 80px;
     margin: 1rem;
-    z-index: 5;
+    margin-top: 2rem;
+    z-index: 10;
+}
+
+.shine{
+    animation: shine 1s ease-in-out .3s infinite alternate;
+}
+
+@keyframes shine {
+    0%{
+        box-shadow: none;
+    }
+    100%{
+        text-shadow: 0 0 10px var(--color-main), 0 0 20px var(--color-main), 0 0 40px var(--color-main),
+        0 0 80px var(--color-main), 0 0 180px var(--color-main);
+    }
+}
+
+.containerInicio{
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #111;
+    z-index: 10;
+}
+
+#comecar{
+    background-color: var(--color-main);
+    border-radius: 1rem;
+    box-shadow: 3px 3px var(--border-clr), 5px 5px 15px #000;
+    border: 2px solid var(--border-clr);
+    cursor: pointer;
+    animation: beggin 2s ease-in-out .3s alternate infinite;
+    font-size: 1.5rem;
+    padding: 1rem;
+    color: #fff;
+    transition: all .3s ease-in-out;
+}
+
+#comecar:hover{
+    animation: none;
+}
+
+#comecar:active{
+    box-shadow: 3px 3px var(--border-clr), 0px 0px 15px var(--border-active);
+}
+
+@keyframes beggin {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.3);
+    }
+}
+
+.nomePlayer-Section{
+    background-color: #111;
+    z-index: 9;
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inputUser{
+    margin: 2rem;
+    background-color: var(--color-main);
+    border: none;
+    border-radius: 2rem;
+    padding: 1.5rem;
+    width: 250px;
+}
+
+.inpN{
+    background-color: #ff7f7f;
+    width: 100%;
+    font-size: 2.5rem;
+}
+
+#inicio{
+    background-color: #ffe17f;
+    margin: 1rem;
+    border: none;
+    border-radius: 2rem;
+    padding: 1.5rem 2.5rem;
 }
 
 .display{

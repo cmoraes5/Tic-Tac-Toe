@@ -22,6 +22,30 @@
 
 // ! <><><><><><> TESTE <><><><><><><><>
 
+
+// * Initial Screen
+let firstScreen = document.querySelector('.containerInicio');
+function playFunc(){
+    firstScreen.style.display = 'none';
+}
+
+// * Add and remove glow shadow on mouseover and onmouseleave
+var shine = document.getElementById("shine");
+
+function addGlow() {
+    shine.classList.add("shine");
+}
+function removeGlow() {
+    shine.classList.remove("shine");
+}
+
+// * Imput Name section
+let nameSection = document.querySelector('.nomePlayer-Section');
+function comecarFun(){
+    nameSection.style.display = 'none';
+}
+
+
 document.addEventListener('DOMContentLoaded', ()=>{
 
     let squares =  document.querySelectorAll(".square");
