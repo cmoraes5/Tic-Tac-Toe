@@ -12,11 +12,16 @@
 // todo ==> Mostrar o nome de quem ganhou 
 // todo ==> Mostrar o movimento
 
+
+
 let board = ['','','','','','','','',''];
 let playerTime = 0; 
 let gameOver = false;
 
 let symbols = ['o', 'x'];
+
+var x = document.getElementsByTagName("input");
+let playerName = x[0].value;
 
 
 let winStates = [
@@ -49,7 +54,15 @@ function handleMove(position){
         if(gameOver == false){
         
         // * Verificar se playerTime é = 0, se for Vdd, colocar 1 no pT, se ñ, colocar 0
-            playerTime = (playerTime == 0) ? 1 : 0; // condição ternária
+            // ? playerTime = (playerTime == 0) ? 1 : 0; // condição ternária
+
+            if(playerTime == 0){
+                playerTime = 1;
+                playerName = x[1].value;
+            }else{
+                playerTime = 0;
+                playerName = x[0].value;
+            }
         }
     }
 

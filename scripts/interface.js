@@ -39,17 +39,24 @@ function removeGlow() {
     shine.classList.remove("shine");
 }
 
+
 // * Imput Name section
+var x = document.getElementsByTagName("input");
+
 let nameSection = document.querySelector('.nomePlayer-Section');
 function comecarFun(){
     nameSection.style.display = 'none';
+    
 }
 
 
+
+
+
 document.addEventListener('DOMContentLoaded', ()=>{
-
+    
     let squares =  document.querySelectorAll(".square");
-
+    
     squares.forEach((square)=>{
         square.addEventListener('click', handleClick);
     })
@@ -69,15 +76,15 @@ function handleClick(event){
 
         if(playerTime == 0){
             playerTime = 1;
-            // playerName = inputN[0].value;
         }
         else{
             playerTime = 0;
-            // playerName = inputN[1].value;
         }
 
+
+
         setTimeout(() => {
-            winningMessageText.innerText = `The player ${playerTime} is the Winner!`
+            winningMessageText.innerText = `${playerName} é o vencedor!`
 
             winningMessageElement.classList.add('show')
         }, 400);
@@ -89,8 +96,7 @@ function updateSquare(position){
     let square = document.getElementById(position.toString());
     let symbol = board[position];
     square.innerHTML = `<div class='${symbol}'></div>`
-    playerDisplay.innerHTML = `É a vez do jogador ${playerTime}`
-    // playerDisplay.innerHTML = "É a vez do jogador " + inputN[0];
+    playerDisplay.innerHTML = `É a vez de ${playerName}`
 }
 
 
