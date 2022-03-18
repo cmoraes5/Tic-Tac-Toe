@@ -27,14 +27,14 @@ body{
 
 h1{
     position: absolute;
-    top: 0;
+    top: 10%;
     left: 0;
     right: 0;
     font-family: Arial, Helvetica, sans-serif;
     color: #fff;
     text-align: center;
-    font-size: 80px;
-    margin: 1rem;
+    font-size: 5rem;
+    margin: 0 1rem;
     margin-top: 2rem;
     z-index: 10;
 }
@@ -97,7 +97,7 @@ h1{
     }
 }
 
-.nomePlayer-Section{
+.nomePlayer-Display{
     background-color: #111;
     z-index: 9;
     display: flex;
@@ -317,7 +317,55 @@ h1{
     display: flex;
 }
 
+.swal-overlay{
+    background-color: #111111d0;
+}
+
+.swal-title{
+    color: #111;
+    font-size: 2rem;
+}
+ .swal-text{
+    color: #111;
+    font-size: 1.5rem;
+}
+
+.colorAlert{
+    background-color: var(--color-main);
+    backdrop-filter: blur(8px);
+    border-radius: 2rem;
+}
+
+.swal-button {
+    padding: 10px 20px;
+    border-radius: 1rem;
+    background-color: #fff;
+    font-size: 1rem;
+    border: none;
+    color: #000;
+    box-shadow: -2px 5px 10px #1119;
+}
+
+.swal-button:focus{
+    box-shadow: -2px 5px 10px #1119;
+}
+
+.swal-button:hover{
+    box-shadow: none;
+}
+
+.swal-footer {
+    background-color: #6cff4f;
+    margin-top: 32px;
+    overflow: hidden;
+}
+
 @media screen and (max-width: 580px) {
+
+    h1{
+        font-size: 10vw;
+    }
+
     .square{
         width: 20vw;
         height: 20vw;
@@ -349,10 +397,12 @@ h1{
             opacity: 1;
         }
     }
+
+    .display{
+        font-size: 2rem;
+        width: calc(100vw - 30%);
+    }
 }
 
 /* todo --> Responsividade */
-/* todo --> Melhorar design */
-/* todo --> Adc animações */
-/* todo --> Melhorar os icons */
 /* todo --> Hover pros icons */

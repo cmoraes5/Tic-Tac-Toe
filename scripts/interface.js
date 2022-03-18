@@ -17,7 +17,16 @@
 
 
     function reset(){
-        window.location.reload();
+            gameOver = false
+            board = ["", "", "", "", "", "", "", "", ""]
+            playerTime = 0
+            let squares = document.querySelectorAll(".square")
+        
+            for (let square of squares) {
+                square.innerHTML = ""
+        
+            }
+            winningMessageElement.style.display = "none"
     }
 
 // ! <><><><><><> TESTE <><><><><><><><>
@@ -43,9 +52,46 @@ function removeGlow() {
 // * Imput Name section
 var x = document.getElementsByTagName("input");
 
-let nameSection = document.querySelector('.nomePlayer-Section');
+let nameSection = document.querySelector('.nomePlayer-Display');
 function comecarFun(){
-    nameSection.style.display = 'none';
+
+//  ?
+    let body = document.getElementById("body")
+    // let placarDisplay = document.querySelector(".placarDisplay")
+
+
+    if (x[0].value == "" &&
+        x[1].value == "") {
+        swal("Ops!", "Preencha os dois Campos",{
+            className: "colorAlert",
+        });
+    }
+    
+    else if (x[0].value == x[1].value) {
+        swal("Xii!", "Não pode haver nomes iguais",{
+            className: "colorAlert",
+        });
+    }
+    
+    else if (x[0].value == "") {
+        swal("Tem coisa faltando...", "Escreva o nome do Primeiro Player",{
+            className: "colorAlert",
+        });
+    }
+    
+    else if (x[1].value == "") {
+        swal("Tem coisa faltando...", "Escreva o nome do Segundo Player",{
+            className: "colorAlert",
+        });
+    }
+
+    else {
+        nameSection.style.display = "none"
+        placarDisplay.style.display = "block"
+        body.style.height = "112vh"
+    }
+
+//  ?
     
 }
 
@@ -84,7 +130,7 @@ function handleClick(event){
 
 
         setTimeout(() => {
-            winningMessageText.innerText = `${playerName} é o vencedor!`
+            winningMessageText.innerText = `${playerName} é o vencedor(a)!`
 
             winningMessageElement.classList.add('show')
         }, 400);
