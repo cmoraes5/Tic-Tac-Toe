@@ -53,6 +53,7 @@
     <!-- ! ----------------------------------------- Display-Player/Begin ----------------------------------------- -->
     
     <!-- * Onde ficarão os quadrados => stage -->
+    <div class="container">
     <main class="stage">
         <!-- * cada uma dessas div's representa uma linha e dentro tem os 3 quadrados -->
         <div>
@@ -72,6 +73,9 @@
             <div id="7" class="square"></div>
             <div id="8" class="square oito"></div></div>
         </main>
+
+        <ion-icon name="arrow-back-outline" class="back" onclick="back()"></ion-icon>
+    </div>
 
         <div class="winning-message" id="winningMessage">
             <div data-winning-message></div> 

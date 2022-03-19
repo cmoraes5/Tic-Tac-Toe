@@ -12,10 +12,6 @@
     
     const playerDisplay = document.querySelector('[data-player-time]');
 
-    // let inputN = document.querySelectorAll(".inputUser")
-    // var playerName = inputN.value;
-
-
     function reset(){
             gameOver = false
             board = ["", "", "", "", "", "", "", "", ""]
@@ -25,9 +21,17 @@
             for (let square of squares) {
                 square.innerHTML = ""
         
+                nameSection.style.display = "none"
             }
             winningMessageElement.style.display = "none"
     }
+
+function back(){
+    reset();
+    nameSection.style.display = "flex";
+    x[0].value = '';
+    x[1].value = '';
+}
 
 // ! <><><><><><> TESTE <><><><><><><><>
 
@@ -53,10 +57,12 @@ function removeGlow() {
 var x = document.getElementsByTagName("input");
 
 let nameSection = document.querySelector('.nomePlayer-Display');
-function comecarFun(){
 
-//  ?
+function comecarFun(){
+    
+    //  ?
     let body = document.getElementById("body")
+    
     // let placarDisplay = document.querySelector(".placarDisplay")
 
 
@@ -86,9 +92,9 @@ function comecarFun(){
     }
 
     else {
-        nameSection.style.display = "none"
-        placarDisplay.style.display = "block"
-        body.style.height = "112vh"
+        nameSection.style.display = "none";
+        placarDisplay.style.display = "block";
+        body.style.height = "112vh";
     }
 
 //  ?
