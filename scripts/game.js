@@ -57,10 +57,10 @@ function handleMove(position){
             // ? playerTime = (playerTime == 0) ? 1 : 0; // condição ternária
 
             if(playerTime == 0){
-                playerTime = 1;
+                playerTime = 1,
                 playerName = x[1].value;
             }else{
-                playerTime = 0;
+                playerTime = 0,
                 playerName = x[0].value;
             }
         }
@@ -89,3 +89,4 @@ function isWin() {
 
     return false;
 }
+

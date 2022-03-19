@@ -23,7 +23,7 @@
         
                 nameSection.style.display = "none"
             }
-            winningMessageElement.style.display = "none"
+            winningMessageElement.classList.remove('show');
     }
 
 function back(){
@@ -134,12 +134,12 @@ function handleClick(event){
         }
 
 
-
+        
         setTimeout(() => {
             winningMessageText.innerText = `${playerName} é o vencedor(a)!`
 
             winningMessageElement.classList.add('show')
-        }, 400);
+        }, 100);
     };
     updateSquare(position);
 }

@@ -321,7 +321,7 @@ h1{
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.9);
     color: white;
-    font-size: 4rem;
+    font-size: 10vw;
     letter-spacing: 5px;
     text-shadow: 0 0 10px var(--color-main), 0 0 20px var(--color-main), 0 0 40px var(--color-main),
         0 0 80px var(--color-main), 0 0 180px var(--color-main);
@@ -418,11 +418,12 @@ h1{
     }
 
     .fieldNames{
-        padding: 2%;
+        padding: 0.5rem 5vw;
     }
 
     .inputUser{
-        width: 80%;
+        display: flex;
+        width: 50vw;
     }
 
     .back{
