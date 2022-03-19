@@ -418,20 +418,16 @@ h1{
     }
 
     .fieldNames{
-        padding: 3%;
+        padding: 2%;
     }
 
     .inputUser{
-        width: 100%;
+        width: 80%;
     }
 
     .back{
-        position: relative;
+        position: static;
         margin: 2rem 10rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
         border: 5px solid #fff;
         color: #fff;
     }
