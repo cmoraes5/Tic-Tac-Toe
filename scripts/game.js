@@ -17,12 +17,20 @@
 let board = ['','','','','','','','',''];
 let playerTime = 0; 
 let gameOver = false;
+let count = [];
+
+let playerBeggin = Math.random();
 
 let symbols = ['o', 'x'];
 
 var x = document.getElementsByTagName("input");
 let playerName = x[0].value;
 
+if(playerBeggin < 0.5){
+    playerBeggin = 0;
+}else{
+    playerBeggin = 1;
+}
 
 let winStates = [
 
@@ -41,10 +49,6 @@ let winStates = [
     [6,4,2],
 ]
 function handleMove(position){
-    
-    if(gameOver){
-        return;
-    }
 
         if (board[position] == ''){
             board[position] = symbols[playerTime];
@@ -59,10 +63,20 @@ function handleMove(position){
             if(playerTime == 0){
                 playerTime = 1,
                 playerName = x[1].value;
+                count.push(".");
+                console.log(count.length)
             }else{
                 playerTime = 0,
                 playerName = x[0].value;
+                count.push(".");
+                console.log(count.length)
             }
+            // if(gameOver == false && count == 9){
+            //     return console.log("empate")
+            // }
+        }if(count.length >= 9){
+            isDraw();
+            console.log("empate");
         }
     }
 
@@ -83,10 +97,10 @@ function isWin() {
             board[pos1] == board[pos3] &&
             board[pos1] != ''){
                 
+                count = [];
                 return true;
             }
     }
 
     return false;
 }
-

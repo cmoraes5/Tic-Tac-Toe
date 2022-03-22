@@ -28,6 +28,8 @@
 
 function back(){
     reset();
+    playerDisplay = playerRandom;
+    count = [];
     nameSection.style.display = "flex";
     x[0].value = '';
     x[1].value = '';
@@ -95,6 +97,7 @@ function comecarFun(){
         nameSection.style.display = "none";
         placarDisplay.style.display = "block";
         body.style.height = "112vh";
+        playerDisplay.innerHTML = `${playerBeggin} começa`;
     }
 
 //  ?
@@ -149,6 +152,14 @@ function updateSquare(position){
     let symbol = board[position];
     square.innerHTML = `<div class='${symbol}'></div>`
     playerDisplay.innerHTML = `É a vez de ${playerName}`
+}
+
+function isDraw(){
+    setTimeout(() => {
+        winningMessageText.innerText = `Deu Velha...`
+
+        winningMessageElement.classList.add('show')
+    }, 100);
 }
 
 
