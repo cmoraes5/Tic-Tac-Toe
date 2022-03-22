@@ -20,10 +20,11 @@
         
             for (let square of squares) {
                 square.innerHTML = ""
-        
+                
                 nameSection.style.display = "none"
             }
             winningMessageElement.classList.remove('show');
+            count = [];
     }
 
 function back(){

@@ -97,7 +97,6 @@ function isWin() {
             board[pos1] == board[pos3] &&
             board[pos1] != ''){
                 
-                count = [];
                 return true;
             }
     }
