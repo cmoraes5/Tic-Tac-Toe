@@ -15,22 +15,26 @@
 
 
 let board = ['','','','','','','','',''];
-let playerTime = 0; 
+let playerBeggin = Math.random();
 let gameOver = false;
 let count = [];
 
-let playerBeggin = Math.random();
 
 let symbols = ['o', 'x'];
 
 var x = document.getElementsByTagName("input");
 let playerName = x[0].value;
 
+
 if(playerBeggin < 0.5){
     playerBeggin = 0;
 }else{
     playerBeggin = 1;
 }
+
+
+let playerTime = playerBeggin; 
+
 
 let winStates = [
 
@@ -48,6 +52,7 @@ let winStates = [
     [0,4,8],
     [6,4,2],
 ]
+
 function handleMove(position){
 
         if (board[position] == ''){
@@ -103,3 +108,8 @@ function isWin() {
 
     return false;
 }
+
+
+//! |- Criar uma variavél que receberá aleátório entre 0 e 1 
+//! |- Escreve-la no display depois de apertar iniciar
+//! |- Apaga-la quando o joagador clicar no quadrado

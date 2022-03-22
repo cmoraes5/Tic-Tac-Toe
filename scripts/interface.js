@@ -5,12 +5,14 @@
 // todo => Mostrar de quem é a vez
 
 // ! <><><><><><> TESTE <><><><><><><><>
+console.log(playerBeggin);
 
 
     const winningMessageElement = document.querySelector('#winningMessage');
     const winningMessageText = document.querySelector('[data-winning-message]');
     
     const playerDisplay = document.querySelector('[data-player-time]');
+    const DDisplay = document.querySelector('[data-playerBg]');
 
     function reset(){
             gameOver = false
@@ -67,10 +69,10 @@ function comecarFun(){
     let body = document.getElementById("body")
     
     // let placarDisplay = document.querySelector(".placarDisplay")
-
-
+    
+    
     if (x[0].value == "" &&
-        x[1].value == "") {
+    x[1].value == "") {
         swal("Ops!", "Preencha os dois Campos",{
             className: "colorAlert",
         });
@@ -93,15 +95,14 @@ function comecarFun(){
             className: "colorAlert",
         });
     }
-
+    
     else {
         nameSection.style.display = "none";
         placarDisplay.style.display = "block";
         body.style.height = "112vh";
-        playerDisplay.innerHTML = `${playerBeggin} começa`;
     }
-
-//  ?
+    
+    //  ?
     
 }
 
@@ -121,7 +122,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 
 function handleClick(event){
-
+    
     console.log(event.target);
     console.log(board);
 
@@ -137,11 +138,11 @@ function handleClick(event){
             playerTime = 0;
         }
 
-
+        
         
         setTimeout(() => {
             winningMessageText.innerText = `${playerName} é o vencedor(a)!`
-
+            
             winningMessageElement.classList.add('show')
         }, 100);
     };
@@ -162,6 +163,15 @@ function isDraw(){
         winningMessageElement.classList.add('show')
     }, 100);
 }
+
+let teste;
+if(playerTime == 0){
+    teste = 1;
+}else{
+    teste = 2;
+}
+
+DDisplay.innerHTML = `player ${teste} começa`;
 
 
 // todo ==> Write the winner on the screen
