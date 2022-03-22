@@ -14,12 +14,17 @@ console.log(playerBeggin);
     const playerDisplay = document.querySelector('[data-player-time]');
     const DDisplay = document.querySelector('[data-playerBg]');
 
+    function newPlayerBeggin(){
+        playerTime == playerBeggin;
+        DDisplay.innerHTML = `player ${teste} começa`;
+    }
+
+
     function reset(){
             gameOver = false
             board = ["", "", "", "", "", "", "", "", ""]
-            playerTime = 0
-            let squares = document.querySelectorAll(".square")
-        
+            let squares = document.querySelectorAll(".square");
+            
             for (let square of squares) {
                 square.innerHTML = ""
                 
@@ -31,7 +36,6 @@ console.log(playerBeggin);
 
 function back(){
     reset();
-    playerDisplay = playerRandom;
     count = [];
     nameSection.style.display = "flex";
     x[0].value = '';
@@ -66,7 +70,8 @@ let nameSection = document.querySelector('.nomePlayer-Display');
 function comecarFun(){
     
     //  ?
-    let body = document.getElementById("body")
+    let body = document.getElementById("body");
+    newPlayerBeggin();
     
     // let placarDisplay = document.querySelector(".placarDisplay")
     
@@ -171,7 +176,7 @@ if(playerTime == 0){
     teste = 2;
 }
 
-DDisplay.innerHTML = `player ${teste} começa`;
+
 
 
 // todo ==> Write the winner on the screen
