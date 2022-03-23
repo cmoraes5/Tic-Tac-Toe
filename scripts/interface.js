@@ -16,7 +16,7 @@ console.log(playerBeggin);
 
     function newPlayerBeggin(){
         playerTime == playerBeggin;
-        DDisplay.innerHTML = `player ${teste} começa`;
+        DDisplay.innerHTML = `player ${teste} starts`;
     }
 
 
@@ -78,25 +78,29 @@ function comecarFun(){
     
     if (x[0].value == "" &&
     x[1].value == "") {
-        swal("Ops!", "Preencha os dois Campos",{
+        // swal("Ops!", "Preencha os dois Campos",{
+        swal("Ops!", "Fill in both fields",{
             className: "colorAlert",
         });
     }
     
     else if (x[0].value == x[1].value) {
-        swal("Xii!", "Não pode haver nomes iguais",{
+        // swal("Xii!", "Não pode haver nomes iguais",{
+        swal("Sorry", "Can't have the same name twice",{
             className: "colorAlert",
         });
     }
     
     else if (x[0].value == "") {
-        swal("Tem coisa faltando...", "Escreva o nome do Primeiro Player",{
+        // swal("Tem coisa faltando...", "Escreva o nome do Primeiro Player",{
+        swal("Wait...", "Type the fisrt player name",{
             className: "colorAlert",
         });
     }
     
     else if (x[1].value == "") {
-        swal("Tem coisa faltando...", "Escreva o nome do Segundo Player",{
+        // swal("Tem coisa faltando...", "Escreva o nome do Segundo Player",{
+        swal("Wait...", "Type the second player name",{
             className: "colorAlert",
         });
     }
@@ -146,7 +150,7 @@ function handleClick(event){
         
         
         setTimeout(() => {
-            winningMessageText.innerText = `${playerName} é o vencedor(a)!`
+            winningMessageText.innerText = `${playerName} is the winner!`
             
             winningMessageElement.classList.add('show')
         }, 100);
@@ -158,12 +162,12 @@ function updateSquare(position){
     let square = document.getElementById(position.toString());
     let symbol = board[position];
     square.innerHTML = `<div class='${symbol}'></div>`
-    playerDisplay.innerHTML = `É a vez de ${playerName}`
+    playerDisplay.innerHTML = `It's ${playerName} turn`
 }
 
 function isDraw(){
     setTimeout(() => {
-        winningMessageText.innerText = `Deu Velha...`
+        winningMessageText.innerText = `Draw...`
 
         winningMessageElement.classList.add('show')
     }, 100);
