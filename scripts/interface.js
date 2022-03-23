@@ -177,6 +177,13 @@ if(playerTime == 0){
 }
 
 
+function easterEgg(){
+    setTimeout(() => {
+        shine.innerHTML = "Congratulations, you found the easter egg! 🥚"
+        }, 15000);
+    }
+
+
 
 
 // todo ==> Write the winner on the screen
