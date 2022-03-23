@@ -4,6 +4,7 @@
   # Tic-Tac-Toe
   
   One of the most world famous game!
+  
   <img src="./src/images/tic-tac-toe (1).png" alt="Desktop Game">
 </div>
 
