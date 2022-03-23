@@ -4,6 +4,14 @@
   # Tic-Tac-Toe
   
   One of the most world famous game!
+  <img src="./src/images/tic-tac-toe (1).png" alt="Desktop Game">
+</div>
+
+###
+<div align="center">
+  <h2>Desktop</h2>
+  <img src="./src/images/desktop.png" alt="Desktop Game">
+  
 </div>
 
 <div id="PlayModes">
@@ -38,4 +46,10 @@
 </div>
 
 
+<br><br>
 
+<div align="center" id="link">
+  <h1>
+    <a href="https://cmoraes5.github.io/Tic-Tac-Toe/"><b>Play</b></a>
+  </h1>
+</div>
